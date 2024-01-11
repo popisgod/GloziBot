@@ -27,6 +27,7 @@ client.on('interactionCreate', (interaction) => {
     if (commands.hasOwnProperty(CommandName)){
         console.log(CommandName);
         commands[CommandName](interaction);
+        
     } else {
         console.log(`Unknown interaction - ${commandName}`)
     }
