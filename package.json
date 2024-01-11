@@ -12,11 +12,11 @@
     "lodash": "^4.17.21",
     "lodash.snakecase": "^4.1.1",
     "magic-bytes.js": "^1.7.0",
+    "puppeteer": "^21.7.0",
     "ts-mixer": "^6.0.3",
     "tslib": "^2.6.2",
     "undici": "^5.27.2",
-    "undici-types": "^5.26.5",
-    "ws": "^8.14.2"
+    "undici-types": "^5.26.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
