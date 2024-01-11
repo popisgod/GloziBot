@@ -1,6 +1,9 @@
 require('dotenv').config();
 const commands = require('./handle-commands.js');
-const { Client, IntentsBitField } = require('discord.js'); 
+const { Client, 
+        IntentsBitField, 
+        GatewayIntentBits,
+        EmbedBuilder } = require('discord.js'); 
 
 
 
