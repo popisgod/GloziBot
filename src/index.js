@@ -1,6 +1,8 @@
 require('dotenv').config();
+const commands = require('./handle-commands.js');
 const { Client, IntentsBitField } = require('discord.js'); 
-const { intersection } = require('lodash');
+
+
 
 const client = new Client({
     intents : [
@@ -17,8 +19,15 @@ client.on('ready', (c) => {
 
 client.on('interactionCreate', (interaction) => {
     if (!interaction.isChatInputCommand()) return; 
+    const CommandName = interaction.commandName;
 
-    if (interaction.command)
+    if (commands.hasOwnProperty(CommandName)){
+        console.log(CommandName);
+        commands[CommandName](interaction);
+    } else {
+        console.log(`Unknown interaction - ${commandName}`)
+    }
+    
 }); 
 
 
